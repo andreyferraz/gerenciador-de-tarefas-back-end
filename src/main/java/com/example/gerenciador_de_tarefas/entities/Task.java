@@ -1,5 +1,6 @@
 package com.example.gerenciador_de_tarefas.entities;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -25,6 +26,17 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.AUTO) // Gera UUID automaticamente
     @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
-    
+
+    @Column(name = "title", nullable = false)
+    private String title;
+
+    @Column(name = "description", nullable = false)
+    private String description;
+
+    @Column(name = "completed")
+    private boolean completed;
+
+    @Column(name = "dueDate")
+    private LocalDateTime dueDate;
     
 }
