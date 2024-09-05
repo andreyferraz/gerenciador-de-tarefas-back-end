@@ -28,7 +28,7 @@ O **Gerenciador de Tarefas** é uma aplicação web desenvolvida com Java e Spri
 1. **Clone o Repositório**
 
    ```bash
-   git clone https://github.com/seu-usuario/gerenciador-de-tarefas.git
+   git clone https://github.com/andreyferraz/gerenciador-de-tarefas.git
    cd gerenciador-de-tarefas
 
 2. **Compile e Execute**
