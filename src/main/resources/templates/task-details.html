@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <title>Detalhes da Tarefa</title>
+</head>
+<body>
+    <h1>Detalhes da Tarefa</h1>
+    <div>
+        <p><strong>Título:</strong> <span th:text="${task.title}"></span></p>
+        <p><strong>Descrição:</strong> <span th:text="${task.description}"></span></p>
+        <p><strong>Status:</strong> <span th:text="${task.completed ? 'Completed' : 'Pending'}"></span></p>
+        <p><strong>Data:</strong> <span th:text="${#temporals.format(task.dueDate, 'dd/MM/yyyy')}"></span></p>
+    </div>
+    <a th:href="@{'/tasks'}">Voltar para a lista</a>
+</body>
+</html>
