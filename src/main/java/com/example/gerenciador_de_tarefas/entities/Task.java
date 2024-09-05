@@ -1,7 +1,10 @@
 package com.example.gerenciador_de_tarefas.entities;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -37,6 +40,7 @@ public class Task {
     private boolean completed;
 
     @Column(name = "dueDate")
-    private LocalDateTime dueDate;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+    private LocalDate dueDate;
     
 }
