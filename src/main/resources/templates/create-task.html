@@ -6,28 +6,28 @@
     <title>Create Task</title>
 </head>
 <body>
-    <h1>Create New Task</h1>
+    <h1>Cria uma nova tarefa</h1>
     <form th:action="@{/tasks}" th:object="${task}" method="post">
         <div>
-            <label for="title">Title:</label>
+            <label for="title">Título:</label>
             <input type="text" id="title" th:field="*{title}" required />
         </div>
         <div>
-            <label for="description">Description:</label>
+            <label for="description">Descrição:</label>
             <textarea id="description" th:field="*{description}" required></textarea>
         </div>
         <div>
-            <label for="completed">Completed:</label>
+            <label for="completed">Completado:</label>
             <input type="checkbox" id="completed" th:field="*{completed}" />
         </div>
         <div>
-            <label for="dueDate">Due Date (dd/MM/yyyy):</label>
+            <label for="dueDate">Data (dd/MM/yyyy):</label>
             <input type="date" id="dueDate" th:field="*{dueDate}" placeholder="dd/MM/yyyy" required />
         </div>
         <div>
-            <button type="submit">Create Task</button>
+            <button type="submit">Criar Tarefa</button>
         </div>
     </form>
-    <a th:href="@{/tasks}">Back to Task List</a>
+    <a th:href="@{/tasks}">Voltar para lista de tarefas</a>
 </body>
 </html>
